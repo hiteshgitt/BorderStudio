@@ -24,7 +24,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             color: var(--white);
             overflow-x: hidden;
@@ -100,7 +100,7 @@
         .card-demo {
             width: 100%;
             height: 250px;
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
             display: flex;
             align-items: center;
             justify-content: center;
