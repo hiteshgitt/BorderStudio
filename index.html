@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Border Properties Studio</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Import CSS file -->
+  </head>
+  <!-- HTML Starts -->
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>🎨 Border Studio</h1>
+        <p>
+          Advanced CSS border properties playground with real-time preview and
+          modern design
+        </p>
+      </div>
+
+      <div class="main-grid">
+        <div class="preview-section">
+          <div class="preview-card">
+            <div class="card-demo" id="previewCard">Modern Border Preview</div>
+          </div>
+          <div class="css-output">
+            <pre id="cssOutput"></pre>
+          </div>
+        </div>
+
+        <div class="controls">
+          <!-- Border Width -->
+          <div class="control-group">
+            <h3>📏 Border Width</h3>
+            <div class="control-grid">
+              <div class="control-item">
+                <div class="control-label">
+                  All Sides
+                  <span class="control-value" id="borderWidthValue">3px</span>
+                </div>
+                <input
+                  type="range"
+                  id="borderWidth"
+                  min="0"
+                  max="50"
+                  value="3"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Unit</div>
+                <select id="borderWidthUnit">
+                  <option value="px">px</option>
+                  <option value="em">em</option>
+                  <option value="rem">rem</option>
+                  <option value="vw">vw</option>
+                  <option value="vh">vh</option>
+                  <option value="%">%</option>
+                </select>
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Top
+                  <span class="control-value" id="borderTopWidthValue"
+                    >3px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderTopWidth"
+                  min="0"
+                  max="50"
+                  value="3"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Right
+                  <span class="control-value" id="borderRightWidthValue"
+                    >3px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderRightWidth"
+                  min="0"
+                  max="50"
+                  value="3"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Bottom
+                  <span class="control-value" id="borderBottomWidthValue"
+                    >3px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderBottomWidth"
+                  min="0"
+                  max="50"
+                  value="3"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Left
+                  <span class="control-value" id="borderLeftWidthValue"
+                    >3px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderLeftWidth"
+                  min="0"
+                  max="50"
+                  value="3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Border Style -->
+          <div class="control-group">
+            <h3>🎭 Border Style</h3>
+            <div class="control-grid">
+              <div class="control-item">
+                <div class="control-label">All Sides</div>
+                <select id="borderStyle">
+                  <option value="solid" selected>solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="dotted">dotted</option>
+                  <option value="double">double</option>
+                  <option value="groove">groove</option>
+                  <option value="ridge">ridge</option>
+                  <option value="inset">inset</option>
+                  <option value="outset">outset</option>
+                  <option value="none">none</option>
+                  <option value="hidden">hidden</option>
+                </select>
+              </div>
+              <div class="control-item">
+                <div class="control-label">Top</div>
+                <select id="borderTopStyle">
+                  <option value="solid" selected>solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="dotted">dotted</option>
+                  <option value="double">double</option>
+                  <option value="groove">groove</option>
+                  <option value="ridge">ridge</option>
+                  <option value="inset">inset</option>
+                  <option value="outset">outset</option>
+                  <option value="none">none</option>
+                </select>
+              </div>
+              <div class="control-item">
+                <div class="control-label">Right</div>
+                <select id="borderRightStyle">
+                  <option value="solid" selected>solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="dotted">dotted</option>
+                  <option value="double">double</option>
+                  <option value="groove">groove</option>
+                  <option value="ridge">ridge</option>
+                  <option value="inset">inset</option>
+                  <option value="outset">outset</option>
+                  <option value="none">none</option>
+                </select>
+              </div>
+              <div class="control-item">
+                <div class="control-label">Bottom</div>
+                <select id="borderBottomStyle">
+                  <option value="solid" selected>solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="dotted">dotted</option>
+                  <option value="double">double</option>
+                  <option value="groove">groove</option>
+                  <option value="ridge">ridge</option>
+                  <option value="inset">inset</option>
+                  <option value="outset">outset</option>
+                  <option value="none">none</option>
+                </select>
+              </div>
+              <div class="control-item">
+                <div class="control-label">Left</div>
+                <select id="borderLeftStyle">
+                  <option value="solid" selected>solid</option>
+                  <option value="dashed">dashed</option>
+                  <option value="dotted">dotted</option>
+                  <option value="double">double</option>
+                  <option value="groove">groove</option>
+                  <option value="ridge">ridge</option>
+                  <option value="inset">inset</option>
+                  <option value="outset">outset</option>
+                  <option value="none">none</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Border Color -->
+          <div class="control-group">
+            <h3>🌈 Border Color</h3>
+            <div class="control-grid">
+              <div class="control-item">
+                <div class="control-label">All Sides</div>
+                <input type="color" id="borderColor" value="#ffffff" />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Top</div>
+                <input type="color" id="borderTopColor" value="#ffffff" />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Right</div>
+                <input type="color" id="borderRightColor" value="#ffffff" />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Bottom</div>
+                <input type="color" id="borderBottomColor" value="#ffffff" />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Left</div>
+                <input type="color" id="borderLeftColor" value="#ffffff" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Border Radius -->
+          <div class="control-group">
+            <h3>📐 Border Radius</h3>
+            <div class="control-grid">
+              <div class="control-item">
+                <div class="control-label">
+                  All Corners
+                  <span class="control-value" id="borderRadiusValue">16px</span>
+                </div>
+                <input
+                  type="range"
+                  id="borderRadius"
+                  min="0"
+                  max="100"
+                  value="16"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Top Left
+                  <span class="control-value" id="borderTopLeftRadiusValue"
+                    >16px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderTopLeftRadius"
+                  min="0"
+                  max="100"
+                  value="16"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Top Right
+                  <span class="control-value" id="borderTopRightRadiusValue"
+                    >16px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderTopRightRadius"
+                  min="0"
+                  max="100"
+                  value="16"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Bottom Right
+                  <span class="control-value" id="borderBottomRightRadiusValue"
+                    >16px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderBottomRightRadius"
+                  min="0"
+                  max="100"
+                  value="16"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Bottom Left
+                  <span class="control-value" id="borderBottomLeftRadiusValue"
+                    >16px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="borderBottomLeftRadius"
+                  min="0"
+                  max="100"
+                  value="16"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Border Image -->
+          <div class="control-group">
+            <h3>🖼️ Border Image</h3>
+            <div class="image-controls">
+              <div class="control-item image-url-input">
+                <div class="control-label">Image URL or Data URI</div>
+                <input
+                  type="text"
+                  id="borderImageSource"
+                  placeholder="Enter image URL or select preset below"
+                />
+              </div>
+
+              <div class="preset-images">
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='checkerboard' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Crect width='5' height='5' fill='%23ff6b6b'/%3E%3Crect x='5' y='5' width='5' height='5' fill='%23ff6b6b'/%3E%3Crect x='5' y='0' width='5' height='5' fill='%234ecdc4'/%3E%3Crect x='0' y='5' width='5' height='5' fill='%234ecdc4'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23checkerboard)'/%3E%3C/svg%3E"
+                  class="preset-image"
+                  data-url="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='checkerboard' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Crect width='5' height='5' fill='%23ff6b6b'/%3E%3Crect x='5' y='5' width='5' height='5' fill='%23ff6b6b'/%3E%3Crect x='5' y='0' width='5' height='5' fill='%234ecdc4'/%3E%3Crect x='0' y='5' width='5' height='5' fill='%234ecdc4'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23checkerboard)'/%3E%3C/svg%3E"
+                  alt="Checkerboard"
+                />
+
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3ClinearGradient id='rainbow' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23ff0000'/%3E%3Cstop offset='16.66%25' stop-color='%23ff8800'/%3E%3Cstop offset='33.33%25' stop-color='%23ffff00'/%3E%3Cstop offset='50%25' stop-color='%2300ff00'/%3E%3Cstop offset='66.66%25' stop-color='%230088ff'/%3E%3Cstop offset='83.33%25' stop-color='%234400ff'/%3E%3Cstop offset='100%25' stop-color='%23ff00ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23rainbow)'/%3E%3C/svg%3E"
+                  class="preset-image"
+                  data-url="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3ClinearGradient id='rainbow' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' stop-color='%23ff0000'/%3E%3Cstop offset='16.66%25' stop-color='%23ff8800'/%3E%3Cstop offset='33.33%25' stop-color='%23ffff00'/%3E%3Cstop offset='50%25' stop-color='%2300ff00'/%3E%3Cstop offset='66.66%25' stop-color='%230088ff'/%3E%3Cstop offset='83.33%25' stop-color='%234400ff'/%3E%3Cstop offset='100%25' stop-color='%23ff00ff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23rainbow)'/%3E%3C/svg%3E"
+                  alt="Rainbow"
+                />
+
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='10' cy='10' r='3' fill='%236366f1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='%23f8fafc'/%3E%3Crect width='100' height='100' fill='url(%23dots)'/%3E%3C/svg%3E"
+                  class="preset-image"
+                  data-url="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='dots' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='10' cy='10' r='3' fill='%236366f1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='%23f8fafc'/%3E%3Crect width='100' height='100' fill='url(%23dots)'/%3E%3C/svg%3E"
+                  alt="Dots"
+                />
+
+                <img
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='stripes' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Crect width='5' height='10' fill='%23ef4444'/%3E%3Crect x='5' width='5' height='10' fill='%23f97316'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23stripes)'/%3E%3C/svg%3E"
+                  class="preset-image"
+                  data-url="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cdefs%3E%3Cpattern id='stripes' width='10' height='10' patternUnits='userSpaceOnUse'%3E%3Crect width='5' height='10' fill='%23ef4444'/%3E%3Crect x='5' width='5' height='10' fill='%23f97316'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100' height='100' fill='url(%23stripes)'/%3E%3C/svg%3E"
+                  alt="Stripes"
+                />
+              </div>
+
+              <div class="control-grid">
+                <div class="control-item">
+                  <div class="control-label">
+                    Slice Top
+                    <span class="control-value" id="borderImageSliceTopValue"
+                      >10</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="borderImageSliceTop"
+                    min="0"
+                    max="100"
+                    value="10"
+                  />
+                </div>
+                <div class="control-item">
+                  <div class="control-label">
+                    Slice Right
+                    <span class="control-value" id="borderImageSliceRightValue"
+                      >10</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="borderImageSliceRight"
+                    min="0"
+                    max="100"
+                    value="10"
+                  />
+                </div>
+                <div class="control-item">
+                  <div class="control-label">
+                    Slice Bottom
+                    <span class="control-value" id="borderImageSliceBottomValue"
+                      >10</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="borderImageSliceBottom"
+                    min="0"
+                    max="100"
+                    value="10"
+                  />
+                </div>
+                <div class="control-item">
+                  <div class="control-label">
+                    Slice Left
+                    <span class="control-value" id="borderImageSliceLeftValue"
+                      >10</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="borderImageSliceLeft"
+                    min="0"
+                    max="100"
+                    value="10"
+                  />
+                </div>
+                <div class="control-item">
+                  <div class="control-label">
+                    Width
+                    <span class="control-value" id="borderImageWidthValue"
+                      >1</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="borderImageWidth"
+                    min="0"
+                    max="50"
+                    value="1"
+                    step="0.5"
+                  />
+                </div>
+                <div class="control-item">
+                  <div class="control-label">
+                    Outset
+                    <span class="control-value" id="borderImageOutsetValue"
+                      >0px</span
+                    >
+                  </div>
+                  <input
+                    type="range"
+                    id="borderImageOutset"
+                    min="0"
+                    max="50"
+                    value="0"
+                  />
+                </div>
+              </div>
+
+              <div class="control-item">
+                <div class="control-label">Repeat Mode</div>
+                <div class="toggle-group">
+                  <button class="toggle-button active" data-repeat="stretch">
+                    Stretch
+                  </button>
+                  <button class="toggle-button" data-repeat="repeat">
+                    Repeat
+                  </button>
+                  <button class="toggle-button" data-repeat="round">
+                    Round
+                  </button>
+                  <button class="toggle-button" data-repeat="space">
+                    Space
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Advanced Properties -->
+          <div class="control-group">
+            <h3>⚡ Advanced Properties</h3>
+            <div class="control-grid">
+              <div class="control-item">
+                <div class="control-label">Box Shadow</div>
+                <div class="toggle-group">
+                  <button class="toggle-button" data-shadow="none">None</button>
+                  <button class="toggle-button active" data-shadow="small">
+                    Small
+                  </button>
+                  <button class="toggle-button" data-shadow="medium">
+                    Medium
+                  </button>
+                  <button class="toggle-button" data-shadow="large">
+                    Large
+                  </button>
+                </div>
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Shadow Blur
+                  <span class="control-value" id="shadowBlurValue">10px</span>
+                </div>
+                <input
+                  type="range"
+                  id="shadowBlur"
+                  min="0"
+                  max="50"
+                  value="10"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Shadow Spread
+                  <span class="control-value" id="shadowSpreadValue">0px</span>
+                </div>
+                <input
+                  type="range"
+                  id="shadowSpread"
+                  min="-20"
+                  max="20"
+                  value="0"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Shadow Color</div>
+                <input type="color" id="shadowColor" value="#000000" />
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Shadow Opacity
+                  <span class="control-value" id="shadowOpacityValue"
+                    >0.25</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="shadowOpacity"
+                  min="0"
+                  max="1"
+                  value="0.25"
+                  step="0.01"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Box Sizing</div>
+                <select id="boxSizing">
+                  <option value="border-box">border-box</option>
+                  <option value="content-box">content-box</option>
+                </select>
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Outline Width
+                  <span class="control-value" id="outlineWidthValue">0px</span>
+                </div>
+                <input
+                  type="range"
+                  id="outlineWidth"
+                  min="0"
+                  max="10"
+                  value="0"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Outline Color</div>
+                <input type="color" id="outlineColor" value="#6366f1" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Animation & Effects -->
+          <div class="control-group">
+            <h3>✨ Animation & Effects</h3>
+            <div class="control-grid">
+              <div class="control-item">
+                <div class="control-label">Animation</div>
+                <div class="toggle-group">
+                  <button class="toggle-button active" data-animation="none">
+                    None
+                  </button>
+                  <button class="toggle-button" data-animation="pulse">
+                    Pulse
+                  </button>
+                  <button class="toggle-button" data-animation="glow">
+                    Glow
+                  </button>
+                  <button class="toggle-button" data-animation="rotate">
+                    Rotate
+                  </button>
+                  <button class="toggle-button" data-animation="scale">
+                    Scale
+                  </button>
+                </div>
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Animation Speed
+                  <span class="control-value" id="animationSpeedValue">2s</span>
+                </div>
+                <input
+                  type="range"
+                  id="animationSpeed"
+                  min="0.5"
+                  max="5"
+                  value="2"
+                  step="0.1"
+                />
+              </div>
+              <div class="control-item">
+                <div class="control-label">Backdrop Filter</div>
+                <div class="toggle-group">
+                  <button class="toggle-button active" data-backdrop="none">
+                    None
+                  </button>
+                  <button class="toggle-button" data-backdrop="blur">
+                    Blur
+                  </button>
+                  <button class="toggle-button" data-backdrop="brightness">
+                    Bright
+                  </button>
+                  <button class="toggle-button" data-backdrop="contrast">
+                    Contrast
+                  </button>
+                </div>
+              </div>
+              <div class="control-item">
+                <div class="control-label">
+                  Filter Intensity
+                  <span class="control-value" id="filterIntensityValue"
+                    >10px</span
+                  >
+                </div>
+                <input
+                  type="range"
+                  id="filterIntensity"
+                  min="0"
+                  max="30"
+                  value="10"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/logic.js"></script>
+    <!-- Import JS file -->
+  </body>
+</html>
